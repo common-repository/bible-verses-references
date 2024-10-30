@@ -1,0 +1,281 @@
+
+cite {
+    cursor: help;
+    display: inline-block;
+    font-weight: 600;
+    font-style: normal;
+    line-height: inherit;
+}
+
+cite::after {
+    background-image: url(/wp-content/plugins/bible-verses-references/includes/images/footnote.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 12px;
+    content: "";
+    cursor: context-menu;
+    display: inline-block;
+    height: 12px;
+    margin: 3px;
+    opacity: .5;
+    width: 12px;
+}
+
+cite:hover::after {
+    opacity: 1;
+}
+
+#tooltip {
+    position: absolute;
+    display: none;
+}
+
+cite:hover #tooltip {
+    display: block;
+}
+
+/* Setas */
+#tooltip:after {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+    content: '';
+    position: absolute;
+    left: 50%;
+    /* bottom: -10px; */
+    margin-left: -10px;
+}
+
+#tooltip.top:after {
+    border-top-color: transparent;
+    border-bottom: 10px solid #ccc;
+    border-bottom-color:#ccc;
+    top: -20px;
+    bottom: auto;
+}
+
+#tooltip.left:after {
+    left: 10px;
+    margin: 0;
+}
+
+#tooltip.right:after {
+    right: 10px;
+    left: auto;
+    margin: 0;
+}
+
+.rtTooltipHeader {
+    font-family: Arial, Helvetica, serif
+}
+
+.rtTooltipBody {
+    font-family: Helvetica, Arial, serif;
+    max-height: 450px;
+    overflow: auto;
+}
+
+.rtTooltipBody sup{
+    font-weight: bold;
+}
+
+.rtTooltipBody .ch-ref {
+    font-weight: 700
+}
+
+.rtTooltipFooter {
+    font-size: 8px;
+    font-weight: normal;
+    font-style: normal;
+    color: #bbb;
+}
+
+.rtTooltipDropShadow .rtContainer {
+    -webkit-box-shadow: 0 0 10px 0 #444;
+    -moz-box-shadow: 0 0 10px 0 #444;
+    box-shadow: 0 0 10px 0 #444
+}
+
+.rtTooltipRoundedCorners .rtContainer {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden
+}
+
+.rtTooltipFooter a {
+    font-family: Helvetica, Arial, serif;
+    font-weight: 400
+}
+
+.rtTooltipBrandLink a:hover,
+.rtTooltipBrandLink a:link,
+.rtTooltipBrandLink a:visited,
+.rtTooltipMoreLink:hover,
+.rtTooltipMoreLink:link,
+.rtTooltipMoreLink:visited {
+    text-decoration: none
+}
+
+.rtLight .rtContainer {
+    background: #fff;
+    position: relative;
+}
+
+.rtLight .rtTooltipHeader {
+    background: #e7e7e7;
+    color: #333
+}
+
+.rtLight .rtTooltipBody {
+    color: #666666;
+    font-weight: normal;
+}
+
+.rtLight .rtTooltipBrandLink a:link,
+.rtLight .rtTooltipBrandLink a:visited {
+    color: #ccc
+}
+
+.rtLight .rtTooltipBrandLink a:hover {
+    color: #666
+}
+
+.rtLight .rtTooltipMoreLink:link,
+.rtLight .rtTooltipMoreLink:visited {
+    color: #0080FF
+}
+
+.rtLight .rtTooltipMoreLink:hover {
+    color: #66B2FF
+}
+
+.rtDark .rtContainer {
+    background: #555
+}
+
+.rtDark .rtTooltipHeader {
+    background: #888;
+    color: #eee
+}
+
+.rtDark .rtTooltipBody {
+    color: #fff
+}
+
+.rtDark .rtTooltipBrandLink a:link,
+.rtDark .rtTooltipBrandLink a:visited {
+    color: #999
+}
+
+.rtDark .rtTooltipBrandLink a:hover {
+    color: #eee
+}
+
+.rtDark .rtTooltipMoreLink:link,
+.rtDark .rtTooltipMoreLink:visited {
+    color: #fff
+}
+
+.rtDark .rtTooltipMoreLink:hover {
+    color: #ccc
+}
+
+.rtTooltipSocialIcon {
+    background: url(//api.reftagger.com/v2/social-icons.png)
+}
+
+.rtTooltip {
+    text-align: left;
+    text-indent: 0;
+    width: 400px;
+    min-height: 140px;
+    z-index: 99;
+    max-width: 100%;
+}
+
+.rtTooltip div {
+    text-align: left
+}
+
+.rtTooltipHeader {
+    border: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 32px;
+    height: 32px;
+    margin: 0;
+    padding: 0 20px 0 15px
+}
+
+.rtTooltipBody {
+    border: 0;
+    line-height: 1.4;
+    font-size: 14px;
+    margin: 0;
+    min-height: 40px;
+    padding: 19px 20px 0 15px
+}
+
+.rtTooltipBody .ch-ref,
+.rtTooltipBody .verse-ref {
+    font-size: 85%;
+    position: relative;
+    top: -1px
+}
+
+.rtTooltipFooter {
+    border: 0;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: normal;
+    padding: 22px 32px 12px 15px;
+    text-align: left
+}
+
+.rtTooltipFooter div {
+    text-align: right
+}
+
+.rtTooltipFooter .rtTooltipMoreLink {
+    float: right
+}
+
+.rtTooltipFooter .rtTooltipBrandLink {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 12px
+}
+
+.rtTooltipSocial {
+    float: right
+}
+
+.rtTooltip .rtTooltipSocialIcon {
+    display: inline-block;
+    margin-top: 8px;
+    height: 19px;
+    width: 21px
+}
+
+.rtTooltip,
+.rtTooltip a,
+.rtTooltipBody p,
+.rtTooltipBody span {
+    letter-spacing: normal;
+    margin: 0;
+    padding: 0
+}
+
+.rtLibronix img {
+    float: none
+}
+
+.libronixLinkImage {
+    border: 0;
+    float: none;
+    margin: 0 0 0 4px;
+    padding: 0
+}
